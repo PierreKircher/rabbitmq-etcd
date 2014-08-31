@@ -12,6 +12,11 @@ RUN tar -xzf rabbitmq.tar.gz
 WORKDIR /tmp/rabbitmq
 RUN makepkg --asroot --noconfirm --syncdeps --install
 RUN rabbitmq-plugins enable rabbitmq_management
+RUN rabbitmq-plugins enable rabbitmq_federation
+RUN rabbitmq-plugins enable rabbitmq_federation_management
+RUN rabbitmq-plugins enable rabbitmq_shovel
+RUN rabbitmq-plugins enable rabbitmq_stomp
+RUN rabbitmq-plugins enable rabbitmq_mqtt
 WORKDIR /root
 RUN rm -rf /tmp/rabbitmq
 
