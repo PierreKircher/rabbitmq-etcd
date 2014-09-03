@@ -1,0 +1,11 @@
+[Unit]
+Description=mongodb data
+After=docker.service
+Requires=docker.service
+After=etcd.service
+Requires=etcd.service
+
+[Service]
+ExecStartPre=/bin/sh -c "/usr/bin/docker rm -f mongodb-volume > /dev/null ; true"
+ExecStart=/usr/bin/docker run --name mongodb-volume -v /home/core/mongodb-data:/data/db busybox
+

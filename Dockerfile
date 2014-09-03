@@ -14,6 +14,7 @@ RUN makepkg --asroot --noconfirm --syncdeps --install
 RUN rabbitmq-plugins enable rabbitmq_management
 RUN rabbitmq-plugins enable rabbitmq_federation
 RUN rabbitmq-plugins enable rabbitmq_federation_management
+RUN rabbitmq-plugins enable rabbitmq_web_stomp
 RUN rabbitmq-plugins enable rabbitmq_shovel
 RUN rabbitmq-plugins enable rabbitmq_stomp
 RUN rabbitmq-plugins enable rabbitmq_mqtt
