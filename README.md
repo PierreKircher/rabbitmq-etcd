@@ -15,7 +15,7 @@ With docker:
         --env-file /etc/environment \
         -p 5672:5672                \
         -p 15672:15672              \
-        skrat/rabbitmq-etcd
+         pkircher/rabbitmq-etcd
 ```
 
 Synchronization script expects `COREOS_PRIVATE_IPV4` variable to be host's
@@ -23,8 +23,8 @@ IP address. It uses it access etcd, and publish its own location to etcd.
 
 With fleet:
 ```
-git clone https://github.com/skrat/rabbitmq-etcd.git
-fleetctl start rabbitmq-etcd/rabbitmq.service
+git clone https://github.com/PierreKircher/rabbitmq-etcd.git
+fleetctl start rabbitmq-etcd/lh-rabbitmq@1.service
 ```
 
 Usage

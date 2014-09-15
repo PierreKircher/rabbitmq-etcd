@@ -1,5 +1,4 @@
 FROM base/archlinux
-MAINTAINER Dusan <dusan@floorplanner.com>
 
 # Runs whole system upgrade and install packages
 RUN pacman -Syu --noconfirm
